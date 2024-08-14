@@ -4,7 +4,6 @@ This crate provides alignment info for a user-defined struct, though this crate 
 
 Using this crate requires a MSRV of 1.80.
 
-## Example
 ```rs
 use alignment_exporter_derive::export_alignment;
 
