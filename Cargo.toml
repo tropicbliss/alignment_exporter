@@ -3,3 +3,4 @@ members = [
     "alignment-exporter",
     "alignment_exporter_derive"
 ]
+resolver = "2"
