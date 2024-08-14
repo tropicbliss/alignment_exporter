@@ -11,4 +11,4 @@ repository = "https://github.com/tropicbliss/alignment_exporter"
 rust-version = "1.80"
 
 [dependencies]
-alignment-exporter-derive = { version = "0.1.0", path = "../alignment_exporter_derive" }
+alignment-exporter-derive = "0.1.0"
