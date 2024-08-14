@@ -50,12 +50,11 @@ pub fn export_alignment(_attr: TokenStream, item: TokenStream) -> TokenStream {
         impl AlignmentExporter for #struct_name {
             fn get_alignment() -> &'static [Alignment] {
                 static RESULT: LazyLock<Vec<Alignment>> = LazyLock::new(|| {
-                    let mut vec = Vec::new();
+                    let mut result = Vec::new();
                     let mut offset = 0;
                     let mut max_alignment = 0;
                     #(#code)*
-
-                    vec
+                    result
                 });
                 RESULT.as_slice()
             }
