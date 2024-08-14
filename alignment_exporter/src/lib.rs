@@ -1,7 +1,7 @@
 //! This crate provides alignment info for a user-defined struct, though this crate has increased in scope over time to include other information, such as the type name of struct fields.
 //!
 //! ```
-//! use alignment_exporter_derive::export_alignment;
+//! use alignment_exporter::{Alignment, AlignmentExporter, export_alignment};
 //!
 //! // `export_alignment` already annotates #[repr(C)] to the struct, so adding that yourself is not required. However, it is always better to include it in your code for the sake of explicitness.
 //! #[export_alignment]
@@ -20,6 +20,8 @@
 //!     ]);
 //! }
 //! ```
+
+pub use alignment_exporter_derive::export_alignment;
 
 /// Contains alignment info of a field in a struct.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

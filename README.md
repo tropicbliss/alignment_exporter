@@ -5,7 +5,7 @@ This crate provides alignment info for a user-defined struct, though this crate 
 Using this crate requires an MSRV of 1.80.
 
 ```rs
-use alignment_exporter_derive::export_alignment;
+use alignment_exporter::{Alignment, AlignmentExporter, export_alignment};
 
 // `export_alignment` already annotates #[repr(C)] to the struct, so adding that yourself is not required. However, it is always better to include it in your code for the sake of explicitness.
 #[export_alignment]

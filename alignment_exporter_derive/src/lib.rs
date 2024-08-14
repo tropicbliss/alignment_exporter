@@ -22,7 +22,7 @@ pub fn export_alignment(_attr: TokenStream, item: TokenStream) -> TokenStream {
             code.push(quote! {{
                 let size = std::mem::size_of::<#ty>();
                 let alignment = std::mem::align_of::<#ty>();
-                vec.push(Alignment {
+                result.push(::alignment_exporter::Alignment {
                     size,
                     offset,
                     ty_name: stringify!(#ty)
@@ -43,14 +43,10 @@ pub fn export_alignment(_attr: TokenStream, item: TokenStream) -> TokenStream {
         #[repr(C)]
         #input
 
-        use ::std::sync::LazyLock;
-        use ::std::vec::Vec;
-        use ::alignment_exporter::{Alignment, AlignmentExporter};
-
-        impl AlignmentExporter for #struct_name {
-            fn get_alignment() -> &'static [Alignment] {
-                static RESULT: LazyLock<Vec<Alignment>> = LazyLock::new(|| {
-                    let mut result = Vec::new();
+        impl ::alignment_exporter::AlignmentExporter for #struct_name {
+            fn get_alignment() -> &'static [::alignment_exporter::Alignment] {
+                static RESULT: ::std::sync::LazyLock<::std::vec::Vec<::alignment_exporter::Alignment>> = ::std::sync::LazyLock::new(|| {
+                    let mut result = ::std::vec::Vec::new();
                     let mut offset = 0;
                     let mut max_alignment = 0;
                     #(#code)*
