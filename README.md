@@ -2,7 +2,7 @@
 
 This crate provides alignment info for a user-defined struct, though this crate has increased in scope over time to include other information, such as the type name of struct fields.
 
-Using this crate requires a MSRV of 1.80.
+Using this crate requires an MSRV of 1.80.
 
 ```rs
 use alignment_exporter_derive::export_alignment;
