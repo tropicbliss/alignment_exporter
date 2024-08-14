@@ -25,4 +25,4 @@ fn main() {
 }
 ```
 
-As for why `alignment-exporter-derive` contains the word "derive" even though it is not a derive macro, I forgot to change the name before publishing it. Oh well.
+As for why `alignment-exporter-derive` contains the word "derive" even though it is not a derive macro, I forgot to change the name before publishing it. Oh well 🤷.
