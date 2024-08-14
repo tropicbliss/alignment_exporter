@@ -2,8 +2,6 @@
 
 This crate provides alignment info for a user-defined struct, though this crate has increased in scope over time to include other information, such as the type name of struct fields.
 
-As for why `alignment-exporter-derive` contains the word "derive" even though it is not a derive macro, I forgot to change the name before publishing it. Oh well.
-
 Using this crate requires an MSRV of 1.80.
 
 ```rs
@@ -26,3 +24,5 @@ fn main() {
     ]);
 }
 ```
+
+As for why `alignment-exporter-derive` contains the word "derive" even though it is not a derive macro, I forgot to change the name before publishing it. Oh well.
