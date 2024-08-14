@@ -6,14 +6,12 @@ version = 3
 name = "alignment-exporter"
 version = "0.1.1"
 dependencies = [
- "alignment-exporter-derive 0.1.0",
+ "alignment-exporter-derive 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "alignment-exporter-derive"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "eb9479913ff278bc6ab9b92cffaa4e0b9cb5e565612a72aba4448c4e9ce90af4"
+version = "0.1.1"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -23,6 +21,8 @@ dependencies = [
 [[package]]
 name = "alignment-exporter-derive"
 version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7c64e0956748d755d35d35dd54cadc0ab5c1b615c9f74ae073f23fdccca1523c"
 dependencies = [
  "proc-macro2",
  "quote",
