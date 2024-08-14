@@ -15,11 +15,11 @@ pub fn export_alignment(_attr: TokenStream, item: TokenStream) -> TokenStream {
             });
         }
     };
-    let mut types = Vec::new();
+    let mut code = Vec::new();
     if let syn::Fields::Named(ref fields) = data.fields {
         for field in &fields.named {
             let ty = &field.ty;
-            types.push(quote! {{
+            code.push(quote! {{
                 let size = std::mem::size_of::<#ty>();
                 let alignment = std::mem::align_of::<#ty>();
                 vec.push(Alignment {
@@ -53,7 +53,7 @@ pub fn export_alignment(_attr: TokenStream, item: TokenStream) -> TokenStream {
                     let mut vec = Vec::new();
                     let mut offset = 0;
                     let mut max_alignment = 0;
-                    #(#types)*
+                    #(#code)*
 
                     vec
                 });
