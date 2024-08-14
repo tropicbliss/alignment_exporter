@@ -1,6 +1,6 @@
 [package]
 name = "alignment-exporter"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["tropicbliss <tropicbliss@protonmail.com>"]
 categories = ["data-structures", "graphics"]
 description = "Proc macro providing alignment info for a user-defined struct."
@@ -11,4 +11,4 @@ repository = "https://github.com/tropicbliss/alignment_exporter"
 rust-version = "1.80"
 
 [dependencies]
-alignment-exporter-derive = "0.1.0"
+alignment-exporter-derive = "0.1.1"

@@ -1,6 +1,6 @@
 [package]
 name = "alignment-exporter-derive"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["tropicbliss <tropicbliss@protonmail.com>"]
 categories = []
 description = "Proc macro providing alignment info for a user-defined struct."
